@@ -24,7 +24,8 @@
   },
   "scripts": {
     "start": "cds run",
-    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
+    "deploy-desc": "cf deploy gen/mta.tar -e mta-descriptor.mtaext" 
   },
   "eslintConfig": {
     "extends": "eslint:recommended",

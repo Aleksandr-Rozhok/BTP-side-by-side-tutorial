@@ -1,0 +1,19 @@
+_schema-version: '3.1'
+ID: risk-management-test
+extends: risk-management
+
+resources:
+  - name: risk-management-destination
+    parameters:
+      config:
+        HTML5Runtime_enabled: true
+        init_data:
+          instance:
+            destinations:
+            - Authenticaiton: NoAuthentication
+              Name: MY_DEST
+              ProxyType: Internet
+              Type: HTTP
+              URL: https://sandbox.api.com/s4hanacloud/sap/odata/v4/service/risk/$metadata
+            existing_destinations_policy: update
+        version: 1.0.0
